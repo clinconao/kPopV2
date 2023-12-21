@@ -2,7 +2,7 @@
 *{
     margin: 0;
     padding: 0;
-
+    box-sizing: 0;
 }
 
 body{
@@ -11,14 +11,15 @@ body{
 
 /* The subnavigation menu */
 
-.logoNav{
-    width: 10vh;
+
+a:link, a:visited, a:active{
+    text-decoration: none;
 }
 
 /* Subnav button */
 
 
-/* Add a red background color to navigation links on hover */
+/* Hover cambia de color el menu */
 .navbar a:hover,
 .subnav:hover .subnavbtn {
     background-color: #734EA6;
@@ -45,10 +46,6 @@ iframe {
     font-size: 50px;
   }
 
-/* When you move the mouse over the subnav container, open the subnav content */
-.subnav:hover .subnav-content {
-    display: block;
-}
 
 h1{
     text-align: center;
@@ -63,7 +60,7 @@ h1{
     position: relative;
     flex: 0 0 309px;
     height: 450px;
-    width: 10px;
+    width: 5rem;
     overflow: hidden;
     margin-left: 1.5rem;
     border-radius: 18px;
@@ -71,7 +68,35 @@ h1{
     display: flex;
     padding: 20px;
     margin: 20px;
+}
 
+/* Categorias */
+
+.categories i{
+    margin: auto;
+    padding: .5rem;
+    font-size: 15vh;
+    color: #734EA6;
+}
+
+@media screen and (max-width: 430px) {
+
+    .card{
+        max-height: 200px;
+        max-width: 480vh;
+        flex-direction: row;
+    }
+
+    .card img{
+        max-width: 45%;
+        margin: auto;
+        padding: 0.1em;
+        border-radius: .2em;
+    }
+
+    .categories i{
+        font-size: 10vh;
+    }
 }
 
 .card:hover{
@@ -86,9 +111,7 @@ h1{
 .card body {
     position: absolute;
     top: 0;
-    padding: 28px;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    
+    padding: 28px;    
 }
 
 footer{
@@ -96,25 +119,73 @@ footer{
     text-align: center;
 }
 
-.swiper-slide{
-    width: 100%;
-    height: 500px;
-    padding: 40px;
-    text-align: center;
+.socialnetworks{
+    font-size: 5vh;
 }
 
-.icons{
+.socialnetworks a{
+    color: #F2ECE9;
+}
+
+.socialnetworks a:hover{
+    color: #BE84BF;
+}
+
+
+.input-box-contact{
+    color: #F2ECE9;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 40px;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 500px;
 }
 
-.icons i{
-    font-size: 20px;
-    color: yellow;
+
+.input-box-contact input{
+    width: 100%;
+    height: 50px;
+    padding: 0 10px;
+    background: #be84bf4d;
 }
 
-.icons img{
-    width: 120px;
+.input-box-contact textarea{
+    width: 100%;
+    padding: 0 10px;
+    background: #be84bf4d;
+}
+
+form {
+    width: 30%;
+    margin: auto;
+    padding-left: auto;
+    position: relative;
+
+}
+
+form i{
+    color: #734EA6;
+}
+
+form .fa-name{
+    position: absolute;
+    top: 1rem;
+    left: 10rem;
+}
+
+form .fa-lastname{
+    position: absolute;
+    top: 1rem;
+    left: 24rem;
+}
+
+form .fa-mail{
+    position: absolute;
+    top: 5.5rem;
+    left: 24rem;
+}
+
+form .fa-com{
+    position: absolute;
+    top: 13rem;
+    left: 24rem;
 }
