@@ -5,6 +5,15 @@
     box-sizing: 0;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
+
+ul{
+    list-style-type: none;
+}
+
 body{
     background-color: #F2ECE9;
 }
@@ -38,7 +47,7 @@ iframe {
     transform: scale(2);
   }
   
-    // Ajustamos la altura máxima del video a 600px
+/* Ajustamos la altura máxima del video a 600px */
     
   }
 
@@ -73,29 +82,38 @@ h1{
 /* Categorias */
 
 .categories i{
-    margin: auto;
+    margin: none;
     padding: .5rem;
     font-size: 15vh;
     color: #734EA6;
 }
 
+/* responsive */
+
 @media screen and (max-width: 430px) {
 
-    .card{
+    .card {
         max-height: 200px;
-        max-width: 480vh;
+        min-width: 50vh;
         flex-direction: row;
+        
     }
 
-    .card img{
+    .card img {
         max-width: 45%;
         margin: auto;
         padding: 0.1em;
         border-radius: .2em;
     }
 
-    .categories i{
+    .categories i {
         font-size: 10vh;
+    }
+    
+    iframe {
+        width: 100%;
+        height: 100vh;
+        max-height: 280px;
     }
 }
 
